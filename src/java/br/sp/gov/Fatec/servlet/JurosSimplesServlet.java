@@ -7,6 +7,7 @@ package br.sp.gov.Fatec.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,8 +49,12 @@ public class JurosSimplesServlet extends HttpServlet {
                double j = Double.parseDouble(request.getParameter("j"));
                double n = Double.parseDouble(request.getParameter("n"));
                double vf = vp * (1 + j/100 * n);
+               
+               DecimalFormat df = new DecimalFormat("#,###.00");
+               String sub = df.format(vf);
+               
 
-               out.println("<div>Valor total "+ vf +"</b></div><br>");
+               out.println("<div>Valor total: "+  sub +"</b></div><br>");
               
             } catch (Exception ex) {
               out.println("<div>Erro ao ler parâmetros</div>");  
