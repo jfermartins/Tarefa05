@@ -38,26 +38,24 @@ public class JurosSimplesServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Juros Simples</title>");            
+            out.println("<title>Juros Simples</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Cálculo de juros simples</h1>");
-            
- 
-            try{
-               double vp = Double.parseDouble(request.getParameter("vp"));
-               double j = Double.parseDouble(request.getParameter("j"));
-               double n = Double.parseDouble(request.getParameter("n"));
-               double vf = vp * (1 + j/100 * n);
-               
-               DecimalFormat df = new DecimalFormat("#,###.00");
-               String sub = df.format(vf);
-               
 
-               out.println("<div>Valor total: "+  sub +"</b></div><br>");
-              
+            try {
+                double vp = Double.parseDouble(request.getParameter("vp"));
+                double j = Double.parseDouble(request.getParameter("j"));
+                double n = Double.parseDouble(request.getParameter("n"));
+                double vf = vp * (1 + j / 100 * n);
+
+                DecimalFormat df = new DecimalFormat("#,###.00");
+                String sub = df.format(vf);
+
+                out.println("<div>Valor total: " + sub + "</b></div><br>");
+
             } catch (Exception ex) {
-              out.println("<div>Erro ao ler parâmetros</div>");  
+                out.println("<div>Erro ao ler parâmetros</div>");
             }
             out.println("<a href='index.html'>Voltar</a>");
             out.println("</body>");
