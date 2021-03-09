@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package br.sp.gov.Fatec.servlet;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Fernanda
  */
+
 @WebServlet(name = "JurosSimplesServlet", urlPatterns = {"/juros-simples.html"})
 public class JurosSimplesServlet extends HttpServlet {
 

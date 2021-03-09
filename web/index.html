@@ -8,24 +8,40 @@ and open the template in the editor.
     <head>
         <title>Tarefa aula 05 - Cálculo de juros simples</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     </head>
-    <body>
+    <body style="color: gray; text-align:center">
         <div>
-            <h1>Jane Fernanda Martins</h1>
-            <h2>RA: 1290481812013</h2>
+            <h2 style="color: gray">Jane Fernanda Martins</h2>
+            <h5 style="color: gray">RA: 1290481812013</h5>
+
         </div>
 
         <div>
             <form action="juros-simples.html">
+                <legend>Cálculo de juros simples</legend>
                 <p>Insira o valor a ser calculado: </p>
-                <input type="number" name="vp"/>
+                <input type="number" name="vp"/><br><br>
                 <p>Insira o valor do juros (em %): </p>
-                <input type="number" name="j"/>
+                <input type="number" name="j"/><br><br>
                 <p>Insira a quantidade de meses: </p>
                 <input type="number" name="n"/><br><br>
-                <input type="submit" name="juros-simples" Value="Calcular"/>
+                <input type="submit" class="btn btn-outline-dark" name="math" Value="Calcular"/><br><br>
             </form>
         </div>
+
+        <footer style="background-color: #222222; padding: 30px 30px 20px" ><b>
+
+                <center><p>Programação Orientada a Objetos</p>
+
+                    <p>Professor Ricardo Puppo</p>
+                   
+            </b></footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
