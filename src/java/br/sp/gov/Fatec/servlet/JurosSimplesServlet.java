@@ -47,7 +47,7 @@ public class JurosSimplesServlet extends HttpServlet {
                 double vp = Double.parseDouble(request.getParameter("vp"));
                 double j = Double.parseDouble(request.getParameter("j"));
                 double n = Double.parseDouble(request.getParameter("n"));
-                double vf = vp * (1 + j / 100 * n);
+                double vf = vp * (1 + (j / 100) * n);
 
                 DecimalFormat df = new DecimalFormat("#,###.00");
                 String sub = df.format(vf);
