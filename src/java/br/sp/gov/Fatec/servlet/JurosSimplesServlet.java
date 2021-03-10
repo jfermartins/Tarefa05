@@ -51,8 +51,15 @@ public class JurosSimplesServlet extends HttpServlet {
                 double j = Double.parseDouble(request.getParameter("j"));
                 double n = Double.parseDouble(request.getParameter("n"));
                 double vf = vp * (1 + (j / 100) * n);
-
+                
+                                
                 DecimalFormat df = new DecimalFormat("#,###.00");
+                String fm = df.format(vp);
+
+                out.println("<div>Valor Presente: " + fm + "</div><br>");
+                out.println("<div>Juros: " + j + "</div><br>");
+                out.println("<div>Quantidade de meses: " + n + "</div><br>");
+
                 String sub = df.format(vf);
 
                 out.println("<div>Valor total: " + sub + "</b></div><br>");
